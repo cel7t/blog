@@ -1,0 +1,5 @@
+(undo-tree-save-format-version . 1)
+"0c2630250a452fdb7414699cde81470d079ae1f1"
+[nil nil nil nil (25532 40186 84785 851000) 0 nil]
+([nil current ((75 . 80) (#("black" 0 5 (fontified t face (:background "#000000" :foreground "#ffffff" :box (:line-width -1)))) . 75) (undo-tree-id0 . -5) (undo-tree-id1 . -5) (undo-tree-id2 . -4) (t 25532 39947 738879 969000)) nil (25533 5797 618717 454000) 0 nil])
+nil

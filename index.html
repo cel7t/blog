@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>(blog . (untyped . ml))</title>
+    <meta name="description" content="(blog . (untyped . ml))">
+    <meta name="author"      content="Sarthak Shah">
+    <meta name="keywords"    content="all">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <link rel="icon"      href="/favicon.ico">
+    <link rel="canonical" href="https://lit.untyped.ml/index.html">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/scribble.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/blog-fonts.css">
+    <!-- Feeds -->
+    <link rel="alternate" type="application/atom+xml" href="/feeds/all.atom.xml" title="Atom Feed">
+    <link rel="alternate" type="application/rss+xml" href="/feeds/all.rss.xml" title="RSS Feed">
+    <!-- JS -->
+    </head>
+  <body>
+                <row class="one-column" id="logo">
+                        <col-1><a href="https://lit.untyped.ml">
+                                        <div id="logo-container">
+                                                <img id="logo" src="/img/untyped.svg"/>
+                                                (literature .
+                                                <br>&emsp;(untyped . ml))
+                                        </div>
+                        </a></col-1>
+                </row>
+<article class="index" id="home">
+<row>
+
+<col-1>
+  <p class='date-and-tags'>10 Jan 2023</p></col-1>
+
+<col-2>
+  <h1><a href='/2023/01/january-23.html'>The First Week of January 2023</a></h1>
+  <div class="truncate">
+<p>I decided to start writing a blog to talk about my ventures in programming and system administration to document my progress and motivate me to do more. This entry covers what I did in the first week of January, 2023.</p>
+
+<h1>1
+ <tt>&nbsp;</tt><a name="(part._.Torus_.Wrapper)"></a>Torus Wrapper</h1>
+
+<p>One of the projects I poured a bunch of time into was <a href="https://github.com/cel7t/TorusWrapper">Torus Wrapper</a>, which was an effort to wrap transparent PNGs into tiles that can be tiled to make tiling wallpapers, tiling game assets, et cetera. A high-level overview of how this is done is that the program takes in a transparent png, finds the <span style="font-weight: bold">biggest</span> rectangle <span style="font-style: italic">inside</span> it and then wraps the parts not fitting in the rectangle atop it. Here&rsquo;s an example of a tile created with it:
+
+ <br />
+<img src="/img/posts/2023-01-10-january-23/tile.png" alt="" height="135" width="89" /></p>
+
+<h1>2
+ <tt>&nbsp;</tt><a name="(part._.Lots_of_.Websites)"></a><span style="font-style: italic">Lots</span> of Websites</h1>
+
+<p>I worked on a <span style="font-style: italic">lot</span> of websites during this break; <a href="https://untyped.ml">my personal site</a>, <a href="https://bits-sos.ml">BITS SOS&rsquo; site</a> and the Journal Club&rsquo;s new website.
+I used static site generators to build BITS SOS and JC&rsquo;s sites, as they provide a simple way to theme huge websites; however, these are not free of hiccups.
+Themes often come configured wrong and can cause CSS and images to not load if the paths are not set right. Luckily, there were no other major problems setting up either of them with <a href="https://gohugo.io">HUGO</a>.
+For my personal site, I wrote the main site in <a href="https://clojurescript.org">ClojureScript</a> (with <a href="https://github.com/reagent-project/reagent">Reagent</a>) and the blog site in <a href="https://docs.racket-lang.org/frog/index.html">Frog</a>. The blog (this site) is based on <a href="https://blog.racket-lang.org">Racket lang&rsquo;s blog</a>.</p>
+
+<h1>3
+ <tt>&nbsp;</tt><a name="(part._.Tiny_.Improvements_to_my_.R6.R.S_.Infix_.Calculator)"></a>Tiny Improvements to my R6RS Infix Calculator</h1>
+
+<p>I abstracted away a lot of the recursion in my <a href="&amp;quot;https://github.com/cel7t/R6RS-Calculator&amp;quot;"></a>[R6RS infix expression calculator] by defining a new macro to handle functions that iterate over a carry-forwarded list and adding the clojure thread-first macro (-&gt;). I planned on implementing something called the <span style="font-style: italic">Nestedness Theorem</span>, which is that <span style="font-style: italic">the rightmost open paren is always safe to evaluate</span>. However, my current approach is more-or-less similar to this, hence I did not rewrite it. I also added additional error checking; the program now checks if parens are balanced.</p>
+
+<h1>4
+ <tt>&nbsp;</tt><a name="(part._.Adding_a_.D.D.N.S_to_my_.Home_.Server)"></a>Adding a DDNS to my Home Server</h1>
+
+<p>I was previously connecting to my home server through a static IP, however I realized that my usage needs could be met with a dynamic IP using a dynamic DNS. I thus set up a DDNS on the server and bound its internal IP to ensure that I could boot into it after it rebooted. Home servers are excellent for maintaining private remote project repositories, hosting messenger bots or services like IRC bouncers and testing out dynamic websites.</p></div>
+  <a class="more" href='/2023/01/january-23.html'>more →</a>
+<col-2>
+
+</row>
+
+</article>
+
+<row class="one-column" id="bottom"><col-1></col-1><col-2>
+  <p>Made with <a href="https://github.com/greghendershott/frog">Frog</a>, a static-blog generator written in Racket and based on the <a href="https://blog.racket-lang.org">Racket blog</a>.
+<br /><a href="https://github.com/cel7t/blog">Source code</a> for this blog.</col-2></row>
+  </body>
+</html>

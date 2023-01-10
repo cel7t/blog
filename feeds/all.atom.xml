@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">(blog . (untyped . ml)): (blog . (untyped . ml))</title>
+ <link rel="self" href="https://lit.untyped.ml/feeds/all.atom.xml" />
+ <link href="https://lit.untyped.ml/index.html" />
+ <id>urn:https-lit-untyped-ml:-index-html</id>
+ <updated>2023-01-10T08:03:07Z</updated>
+ <entry>
+  <title type="text">The First Week of January 2023</title>
+  <link rel="alternate" href="https://lit.untyped.ml/2023/01/january-23.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-lit-untyped-ml:-2023-01-january-23-html</id>
+  <published>2023-01-10T08:03:07Z</published>
+  <updated>2023-01-10T08:03:07Z</updated>
+  <author>
+   <name>Sarthak Shah</name></author>
+  <content type="html">
+&lt;p&gt;I decided to start writing a blog to talk about my ventures in programming and system administration to document my progress and motivate me to do more. This entry covers what I did in the first week of January, 2023.&lt;/p&gt;
+
+&lt;h1&gt;1
+ &lt;tt&gt;&amp;nbsp;&lt;/tt&gt;&lt;a name="(part._.Torus_.Wrapper)"&gt;&lt;/a&gt;Torus Wrapper&lt;/h1&gt;
+
+&lt;p&gt;One of the projects I poured a bunch of time into was &lt;a href="https://github.com/cel7t/TorusWrapper"&gt;Torus Wrapper&lt;/a&gt;, which was an effort to wrap transparent PNGs into tiles that can be tiled to make tiling wallpapers, tiling game assets, et cetera. A high-level overview of how this is done is that the program takes in a transparent png, finds the &lt;span style="font-weight: bold"&gt;biggest&lt;/span&gt; rectangle &lt;span style="font-style: italic"&gt;inside&lt;/span&gt; it and then wraps the parts not fitting in the rectangle atop it. Here&amp;rsquo;s an example of a tile created with it:
+
+ &lt;br /&gt;
+&lt;img src="/img/posts/2023-01-10-january-23/tile.png" alt="" height="135" width="89" /&gt;&lt;/p&gt;
+
+&lt;h1&gt;2
+ &lt;tt&gt;&amp;nbsp;&lt;/tt&gt;&lt;a name="(part._.Lots_of_.Websites)"&gt;&lt;/a&gt;&lt;span style="font-style: italic"&gt;Lots&lt;/span&gt; of Websites&lt;/h1&gt;
+
+&lt;p&gt;I worked on a &lt;span style="font-style: italic"&gt;lot&lt;/span&gt; of websites during this break; &lt;a href="https://untyped.ml"&gt;my personal site&lt;/a&gt;, &lt;a href="https://bits-sos.ml"&gt;BITS SOS&amp;rsquo; site&lt;/a&gt; and the Journal Club&amp;rsquo;s new website.
+I used static site generators to build BITS SOS and JC&amp;rsquo;s sites, as they provide a simple way to theme huge websites; however, these are not free of hiccups.
+Themes often come configured wrong and can cause CSS and images to not load if the paths are not set right. Luckily, there were no other major problems setting up either of them with &lt;a href="https://gohugo.io"&gt;HUGO&lt;/a&gt;.
+For my personal site, I wrote the main site in &lt;a href="https://clojurescript.org"&gt;ClojureScript&lt;/a&gt; (with &lt;a href="https://github.com/reagent-project/reagent"&gt;Reagent&lt;/a&gt;) and the blog site in &lt;a href="https://docs.racket-lang.org/frog/index.html"&gt;Frog&lt;/a&gt;. The blog (this site) is based on &lt;a href="https://blog.racket-lang.org"&gt;Racket lang&amp;rsquo;s blog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1&gt;3
+ &lt;tt&gt;&amp;nbsp;&lt;/tt&gt;&lt;a name="(part._.Tiny_.Improvements_to_my_.R6.R.S_.Infix_.Calculator)"&gt;&lt;/a&gt;Tiny Improvements to my R6RS Infix Calculator&lt;/h1&gt;
+
+&lt;p&gt;I abstracted away a lot of the recursion in my &lt;a href="&amp;amp;quot;https://github.com/cel7t/R6RS-Calculator&amp;amp;quot;"&gt;&lt;/a&gt;[R6RS infix expression calculator] by defining a new macro to handle functions that iterate over a carry-forwarded list and adding the clojure thread-first macro (-&amp;gt;). I planned on implementing something called the &lt;span style="font-style: italic"&gt;Nestedness Theorem&lt;/span&gt;, which is that &lt;span style="font-style: italic"&gt;the rightmost open paren is always safe to evaluate&lt;/span&gt;. However, my current approach is more-or-less similar to this, hence I did not rewrite it. I also added additional error checking; the program now checks if parens are balanced.&lt;/p&gt;
+
+&lt;h1&gt;4
+ &lt;tt&gt;&amp;nbsp;&lt;/tt&gt;&lt;a name="(part._.Adding_a_.D.D.N.S_to_my_.Home_.Server)"&gt;&lt;/a&gt;Adding a DDNS to my Home Server&lt;/h1&gt;
+
+&lt;p&gt;I was previously connecting to my home server through a static IP, however I realized that my usage needs could be met with a dynamic IP using a dynamic DNS. I thus set up a DDNS on the server and bound its internal IP to ensure that I could boot into it after it rebooted. Home servers are excellent for maintaining private remote project repositories, hosting messenger bots or services like IRC bouncers and testing out dynamic websites.&lt;/p&gt;</content></entry></feed>
